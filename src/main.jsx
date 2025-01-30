@@ -1,10 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Root from "./routes/root";
-import Home from "./pages/Home";
-import Cart from "./pages/Cart";
-import Shop from "./pages/Shop";
+import Root from "./routes/root/root";
+import Home from "./pages/Home/Home";
+import Shop from "./pages/Shop/Shop";
+import Cart from "./pages/Cart/Cart";
 import { productsLoader} from "./loaders/productsLoader";
 
 const router = createBrowserRouter([
