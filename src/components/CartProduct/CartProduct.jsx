@@ -1,4 +1,6 @@
 import styles from "./CartProduct.module.css";
+import PropTypes from "prop-types";
+
 export default function CartProduct({
   product,
   decrementInCart,
@@ -27,3 +29,10 @@ export default function CartProduct({
     </div>
   );
 }
+
+CartProduct.propTypes = {
+  product: PropTypes.object.isRequired,
+  decrementInCart: PropTypes.func.isRequired,
+  incrementInCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
+};

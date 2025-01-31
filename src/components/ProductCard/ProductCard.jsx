@@ -1,6 +1,6 @@
 import styles from "./ProductCard.module.css";
 import { useState } from "react";
-
+import PropTypes from "prop-types";
 export default function ProductCard({ product, addToCart }) {
   const [amount, setAmount] = useState(1);
   const handleChange = (e) => {
@@ -39,3 +39,8 @@ export default function ProductCard({ product, addToCart }) {
     </div>
   );
 }
+
+ProductCard.propTypes = {
+  product: PropTypes.object.isRequired,
+  addToCart: PropTypes.func.isRequired,
+};
