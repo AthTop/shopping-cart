@@ -54,12 +54,25 @@ export default function Root() {
     setCart(cart.filter((item) => item.id !== product.id));
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
+
   // TODO: Add styling for loading state later
   return (
     <>
       <Navbar cart={cart} />
       <div className={`loading ${isLoading ? "active" : ""}`}></div>
-      <Outlet context={{ cart, addToCart, decrementInCart, incrementInCart, removeFromCart }} />
+      <Outlet
+        context={{
+          cart,
+          addToCart,
+          decrementInCart,
+          incrementInCart,
+          removeFromCart,
+          clearCart,
+        }}
+      />
     </>
   );
 }

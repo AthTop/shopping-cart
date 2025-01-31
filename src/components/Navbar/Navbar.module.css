@@ -1,0 +1,51 @@
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar li a, .logo a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 5px;
+}
+
+.navbar li a:hover, .logo a:hover {
+    color: #007bff;
+}
+
+.navbar .cartLink {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar .cartItems {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    min-width: 16px;
+    text-align: center;
+}

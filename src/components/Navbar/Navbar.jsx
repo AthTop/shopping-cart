@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 export default function Navbar({ cart }) {
   const totalItems = cart.reduce(
@@ -6,10 +7,24 @@ export default function Navbar({ cart }) {
     0
   );
   return (
-    <nav>
-      <Link to={"/"}>Home</Link>
-      <Link to={"/shop"}>Shop</Link>
-      <Link to={"/cart"}>Cart: {totalItems} </Link>
+    <nav className={styles.navbar}>
+      <div className={styles.logo}>
+        <Link to={"/"}>RandomStore</Link>
+      </div>
+      <ul>
+        <li>
+          <Link to={"/"}>Home</Link>
+        </li>
+        <li>
+          <Link to={"/shop"}>Shop</Link>
+        </li>
+        <li>
+          <Link className={styles.cartLink} to={"/cart"}>
+            Cart
+          </Link>
+          <span className={styles.cartItems}>{totalItems}</span>
+        </li>
+      </ul>
     </nav>
   );
 }
