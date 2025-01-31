@@ -1,0 +1,61 @@
+.product {
+    padding: 0;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.product img {
+    flex: 1 0 50px;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+.product p {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.product div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.product button {
+    border-radius: 50%;
+    border: none;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0;
+    transition: background-color 0.2s ease;
+}
+
+.product button:hover {
+    background-color: #ddd;
+}
+
+.product button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.product button span {
+    display: block;
+    line-height: 1;
+}

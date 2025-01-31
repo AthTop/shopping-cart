@@ -1,0 +1,15 @@
+.cart {
+    padding: 0;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.total {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}

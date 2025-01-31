@@ -29,7 +29,7 @@ export default function ProductCard({ product, addToCart }) {
         <button onClick={decrement}>-1</button>
         <button
           onClick={() => {
-            addToCart({ id: product.id, quantity: amount });
+            addToCart({ ...product, quantity: amount });
           }}
         >
           Add

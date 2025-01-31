@@ -26,12 +26,40 @@ export default function Root() {
     setCart(updateQuantity(cart, product.id, product.quantity));
   };
 
+  const decrementInCart = (product) => {
+    setCart(
+      cart
+        .map((item) => {
+          return item.id === product.id
+            ? item.quantity - 1 > 0
+              ? { ...item, quantity: item.quantity - 1 }
+              : null
+            : item;
+        })
+        .filter((item) => item !== null)
+    );
+  };
+
+  const incrementInCart = (product) => {
+    setCart(
+      cart.map((item) => {
+        return item.id === product.id
+          ? { ...item, quantity: item.quantity + 1 }
+          : item;
+      })
+    );
+  };
+
+  const removeFromCart = (product) => {
+    setCart(cart.filter((item) => item.id !== product.id));
+  };
+
   // TODO: Add styling for loading state later
   return (
     <>
       <Navbar cart={cart} />
       <div className={`loading ${isLoading ? "active" : ""}`}></div>
-      <Outlet context={{ cart, addToCart }} />
+      <Outlet context={{ cart, addToCart, decrementInCart, incrementInCart, removeFromCart }} />
     </>
   );
 }
